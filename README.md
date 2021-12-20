@@ -1,6 +1,6 @@
 ## This is a fork of the original azure-devops-extension-api. 
 ### Just more API Calls implemented than in the original.
-### If microsoft implements the missing API Calls you should switch back to the original one
+### If Microsoft implements the missing API Calls you should switch back to the original one
 
 # Contributing
 
