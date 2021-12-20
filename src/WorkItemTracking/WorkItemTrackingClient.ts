@@ -399,6 +399,33 @@ export class WorkItemTrackingRestClient extends RestClientBase {
             }
         });
     }
+    /** Adds a comment to a work item
+     * @param commentText - Content of comment
+     * @param workItemId - Work item id
+     * @param project - Project ID or project name
+     * */
+    public async createComment(
+        commentText: string,
+        workItemId: number,
+        project?: string,
+    ): Promise<WorkItemTracking.WorkItemComment> {
+        const queryValues: any = {
+            project: project,
+            workItemId: workItemId
+        };
+
+        const postBody: any = {
+            text: commentText
+        };
+
+        return this.beginRequest<WorkItemTracking.WorkItemComment>({
+            apiVersion: "6.0-preview.3",
+            body: postBody,
+            method: "POST",
+            queryParams: queryValues,
+            routeTemplate: "/{project}/_apis/wit/workItems/{workItemId}/comments"
+        });
+    }
 
     /**
      * Gets the specified number of comments for a work item from the specified revision.
