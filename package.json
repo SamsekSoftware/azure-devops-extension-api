@@ -4,7 +4,7 @@
   "description": "REST client libraries and contracts for Azure DevOps web extension developers.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/byndit/azure-devops-extension-api.git"
+    "url": "https://github.com/SamsekSoftware/azure-devops-extension-api.git"
   },
   "scripts": {
     "build": "node buildpackage.js",
