@@ -423,7 +423,7 @@ export class WorkItemTrackingRestClient extends RestClientBase {
             body: postBody,
             method: "POST",
             queryParams: queryValues,
-            routeTemplate: "/{project}/_apis/wit/workItems/{workItemId}/comments"
+            routeTemplate: "{project}/_apis/wit/workItems/{workItemId}/comments"
         });
     }
 
