@@ -5,3 +5,5 @@ apis-config/
 *.tgz
 .DS_Store
 *.zip
+/.vs
+package-lock.json
