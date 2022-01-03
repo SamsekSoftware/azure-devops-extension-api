@@ -6,4 +6,3 @@ apis-config/
 .DS_Store
 *.zip
 /.vs
-package-lock.json
