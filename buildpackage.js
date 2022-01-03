@@ -69,9 +69,10 @@ const UglifyES = require("uglify-es");
     console.log(`-- Minified ${count} files.`);
 
     // Copy package.json, LICENSE, README.md to bin
-    console.log("# Copying package.json, LICENSE, and README.md to bin.");
+    console.log("# Copying package.json, package-lock.json, LICENSE, and README.md to bin.");
     try {
         await copy(path.join(__dirname, "package.json"), path.join(__dirname, "bin", "package.json"));
+        await copy(path.join(__dirname, "package-lock.json"), path.join(__dirname, "bin", "package-lock.json"));
         await copy(path.join(__dirname, "LICENSE"), path.join(__dirname, "bin", "LICENSE"));
         await copy(path.join(__dirname, "README.md"), path.join(__dirname, "bin", "README.md"));
     } catch (error) {
