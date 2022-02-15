@@ -656,7 +656,7 @@ export class CoreRestClient extends RestClientBase {
         };
 
         return this.beginRequest<Core.WebApiTeam>({
-            apiVersion: "5.2-preview.3",
+            apiVersion: "5.1",
             routeTemplate: "_apis/projects/{projectId}/teams/{*teamId}",
             routeValues: {
                 projectId: projectId,
@@ -691,7 +691,7 @@ export class CoreRestClient extends RestClientBase {
         };
 
         return this.beginRequest<Core.WebApiTeam[]>({
-            apiVersion: "5.2-preview.3",
+            apiVersion: "5.1",
             routeTemplate: "_apis/projects/{projectId}/teams/{*teamId}",
             routeValues: {
                 projectId: projectId
