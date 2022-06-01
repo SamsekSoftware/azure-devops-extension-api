@@ -385,7 +385,7 @@ export class CoreRestClient extends RestClientBase {
      * @param projectToCreate - The project to create.
      */
     public async queueCreateProject(
-        projectToCreate: Core.TeamProject
+        projectToCreate: Core.TeamProjectToCreate
         ): Promise<Operations.OperationReference> {
 
         return this.beginRequest<Operations.OperationReference>({

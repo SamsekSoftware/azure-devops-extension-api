@@ -250,6 +250,18 @@ export interface TeamContext {
 }
 
 /**
+ * Represents a Team Project To create.
+ */
+export interface TeamProjectToCreate {
+    name: string,
+    description: string,
+    visibility: ProjectVisibility,
+    /**
+     * Set of capabilities this project has (such as process template & version control).
+     */
+     capabilities: { [key: string] : { [key: string] : string; }; };
+}
+/**
  * Represents a Team Project object.
  */
 export interface TeamProject extends TeamProjectReference {
