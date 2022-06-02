@@ -135,7 +135,7 @@ export interface ChangeCountDictionary {
 
 export interface ChangeList<T> {
     allChangesIncluded: boolean;
-    changeCounts: { [key: number] : number; };
+    changeCounts: { [key: number]: number; };
     changes: Change<T>[];
     comment: string;
     commentTruncated: boolean;
@@ -305,7 +305,7 @@ export interface CommentThread {
     /**
      * Set of identities related to this thread
      */
-    identities: { [key: string] : WebApi.IdentityRef; };
+    identities: { [key: string]: WebApi.IdentityRef; };
     /**
      * Specify if the thread is deleted which happens when all comments are deleted.
      */
@@ -788,7 +788,7 @@ export interface GitCommitDiffs {
     allChangesIncluded: boolean;
     baseCommit: string;
     behindCount: number;
-    changeCounts: { [key: number] : number; };
+    changeCounts: { [key: number]: number; };
     changes: GitChange[];
     commonCommit: string;
     targetCommit: string;
@@ -1251,13 +1251,17 @@ export interface GitImportGitSource {
  * A request to import data from a remote source control system.
  */
 export interface GitImportRequest {
-    parameters: any;
+    parameters: {
+        gitSource: {
+            url: string
+        }
+    }
 }
 
 /**
  * A response to import data from a remote source control system.
  */
- export interface GitImportResponse {
+export interface GitImportResponse {
     /**
      * Links to related resources.
      */
@@ -1535,7 +1539,7 @@ export enum GitPathActions {
 }
 
 export interface GitPathToItemsCollection {
-    items: { [key: string] : GitItem[]; };
+    items: { [key: string]: GitItem[]; };
 }
 
 export interface GitPolicyConfigurationResponse {
@@ -1896,7 +1900,7 @@ export interface GitPullRequestQuery {
     /**
      * The results of the queries. This matches the QueryInputs list so Results[n] are the results of QueryInputs[n]. Each entry in the list is a dictionary of commit-\>pull requests.
      */
-    results: { [key: string] : GitPullRequest[]; }[];
+    results: { [key: string]: GitPullRequest[]; }[];
 }
 
 /**
@@ -2546,7 +2550,7 @@ export interface GitSuggestion {
     /**
      * Specific properties describing the suggestion.
      */
-    properties: { [key: string] : any; };
+    properties: { [key: string]: any; };
     /**
      * The type of suggestion (e.g. pull request).
      */
