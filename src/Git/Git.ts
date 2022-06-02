@@ -2327,9 +2327,16 @@ export interface GitRepository {
 
 export interface GitRepositoryCreateOptions {
     name: string;
-    parentRepository: GitRepositoryRef;
+    parentRepository?: {
+        name: string,
+        project: {
+            name: string
+        }
+    };
     project: TfsCore.TeamProjectReference;
 }
+    
+
 
 export interface GitRepositoryRef {
     /**

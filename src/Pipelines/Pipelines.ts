@@ -4,6 +4,8 @@
  * ---------------------------------------------------------
  */
 
+import { GitRepository } from "../Git";
+
 export interface Run {
     /**
      * The class to represent a collection of REST reference links.
@@ -211,7 +213,13 @@ export interface CreatePipelineConfigurationParameters {
     /**
      * Type of configuration.
      */
-    type: ConfigurationType
+    type: ConfigurationType,
+    path: string,
+    repository: {
+        id: string,
+        name: string,
+        type: string
+    }
 }
 
 /**
