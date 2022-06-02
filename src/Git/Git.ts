@@ -1251,6 +1251,13 @@ export interface GitImportGitSource {
  * A request to import data from a remote source control system.
  */
 export interface GitImportRequest {
+    parameters: any;
+}
+
+/**
+ * A response to import data from a remote source control system.
+ */
+ export interface GitImportResponse {
     /**
      * Links to related resources.
      */
