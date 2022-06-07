@@ -21,7 +21,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async addAgentCloud(
         agentCloud: TaskAgent.TaskAgentCloud
-        ): Promise<TaskAgent.TaskAgentCloud> {
+    ): Promise<TaskAgent.TaskAgentCloud> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloud>({
             apiVersion: "5.2-preview.1",
@@ -36,7 +36,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async deleteAgentCloud(
         agentCloudId: number
-        ): Promise<TaskAgent.TaskAgentCloud> {
+    ): Promise<TaskAgent.TaskAgentCloud> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloud>({
             apiVersion: "5.2-preview.1",
@@ -53,7 +53,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async getAgentCloud(
         agentCloudId: number
-        ): Promise<TaskAgent.TaskAgentCloud> {
+    ): Promise<TaskAgent.TaskAgentCloud> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloud>({
             apiVersion: "5.2-preview.1",
@@ -67,7 +67,7 @@ export class TaskAgentRestClient extends RestClientBase {
     /**
      */
     public async getAgentClouds(
-        ): Promise<TaskAgent.TaskAgentCloud[]> {
+    ): Promise<TaskAgent.TaskAgentCloud[]> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloud[]>({
             apiVersion: "5.2-preview.1",
@@ -80,7 +80,7 @@ export class TaskAgentRestClient extends RestClientBase {
      * 
      */
     public async getAgentCloudTypes(
-        ): Promise<TaskAgent.TaskAgentCloudType[]> {
+    ): Promise<TaskAgent.TaskAgentCloudType[]> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloudType[]>({
             apiVersion: "5.2-preview.1",
@@ -97,7 +97,7 @@ export class TaskAgentRestClient extends RestClientBase {
         queueId: number,
         top: number,
         continuationToken?: string
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             '$top': top,
@@ -121,7 +121,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async queueAgentRequest(
         request: TaskAgent.TaskAgentJobRequest,
         queueId: number
-        ): Promise<TaskAgent.TaskAgentJobRequest> {
+    ): Promise<TaskAgent.TaskAgentJobRequest> {
 
         return this.beginRequest<TaskAgent.TaskAgentJobRequest>({
             apiVersion: "5.2-preview.1",
@@ -143,7 +143,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async addAgent(
         agent: TaskAgent.TaskAgent,
         poolId: number
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         return this.beginRequest<TaskAgent.TaskAgent>({
             apiVersion: "5.2-preview.1",
@@ -165,7 +165,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteAgent(
         poolId: number,
         agentId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -195,7 +195,7 @@ export class TaskAgentRestClient extends RestClientBase {
         includeAssignedRequest?: boolean,
         includeLastCompletedRequest?: boolean,
         propertyFilters?: string[]
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         const queryValues: any = {
             includeCapabilities: includeCapabilities,
@@ -234,7 +234,7 @@ export class TaskAgentRestClient extends RestClientBase {
         includeLastCompletedRequest?: boolean,
         propertyFilters?: string[],
         demands?: string[]
-        ): Promise<TaskAgent.TaskAgent[]> {
+    ): Promise<TaskAgent.TaskAgent[]> {
 
         const queryValues: any = {
             agentName: agentName,
@@ -266,7 +266,7 @@ export class TaskAgentRestClient extends RestClientBase {
         agent: TaskAgent.TaskAgent,
         poolId: number,
         agentId: number
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         return this.beginRequest<TaskAgent.TaskAgent>({
             apiVersion: "5.2-preview.1",
@@ -291,7 +291,7 @@ export class TaskAgentRestClient extends RestClientBase {
         agent: TaskAgent.TaskAgent,
         poolId: number,
         agentId: number
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         return this.beginRequest<TaskAgent.TaskAgent>({
             apiVersion: "5.2-preview.1",
@@ -310,7 +310,7 @@ export class TaskAgentRestClient extends RestClientBase {
      * 
      */
     public async getAzureManagementGroups(
-        ): Promise<TaskAgent.AzureManagementGroupQueryResult> {
+    ): Promise<TaskAgent.AzureManagementGroupQueryResult> {
 
         return this.beginRequest<TaskAgent.AzureManagementGroupQueryResult>({
             apiVersion: "5.2-preview.1",
@@ -323,7 +323,7 @@ export class TaskAgentRestClient extends RestClientBase {
      * 
      */
     public async getAzureSubscriptions(
-        ): Promise<TaskAgent.AzureSubscriptionQueryResult> {
+    ): Promise<TaskAgent.AzureSubscriptionQueryResult> {
 
         return this.beginRequest<TaskAgent.AzureSubscriptionQueryResult>({
             apiVersion: "5.2-preview.1",
@@ -340,7 +340,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async generateDeploymentGroupAccessToken(
         project: string,
         deploymentGroupId: number
-        ): Promise<string> {
+    ): Promise<string> {
 
         return this.beginRequest<string>({
             apiVersion: "5.2-preview.1",
@@ -362,7 +362,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async addDeploymentGroup(
         deploymentGroup: TaskAgent.DeploymentGroupCreateParameter,
         project: string
-        ): Promise<TaskAgent.DeploymentGroup> {
+    ): Promise<TaskAgent.DeploymentGroup> {
 
         return this.beginRequest<TaskAgent.DeploymentGroup>({
             apiVersion: "5.2-preview.1",
@@ -384,7 +384,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteDeploymentGroup(
         project: string,
         deploymentGroupId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -410,7 +410,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         actionFilter?: TaskAgent.DeploymentGroupActionFilter,
         expand?: TaskAgent.DeploymentGroupExpands
-        ): Promise<TaskAgent.DeploymentGroup> {
+    ): Promise<TaskAgent.DeploymentGroup> {
 
         const queryValues: any = {
             actionFilter: actionFilter,
@@ -447,7 +447,7 @@ export class TaskAgentRestClient extends RestClientBase {
         continuationToken?: string,
         top?: number,
         ids?: number[]
-        ): Promise<TaskAgent.DeploymentGroup[]> {
+    ): Promise<TaskAgent.DeploymentGroup[]> {
 
         const queryValues: any = {
             name: name,
@@ -479,7 +479,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroup: TaskAgent.DeploymentGroupUpdateParameter,
         project: string,
         deploymentGroupId: number
-        ): Promise<TaskAgent.DeploymentGroup> {
+    ): Promise<TaskAgent.DeploymentGroup> {
 
         return this.beginRequest<TaskAgent.DeploymentGroup>({
             apiVersion: "5.2-preview.1",
@@ -506,7 +506,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupName?: string,
         continuationToken?: string,
         top?: number
-        ): Promise<TaskAgent.DeploymentGroupMetrics[]> {
+    ): Promise<TaskAgent.DeploymentGroupMetrics[]> {
 
         const queryValues: any = {
             deploymentGroupName: deploymentGroupName,
@@ -535,7 +535,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         machineId: number,
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             machineId: machineId,
@@ -564,7 +564,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         machineIds?: number[],
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             machineIds: machineIds && machineIds.join(","),
@@ -589,7 +589,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async refreshDeploymentMachines(
         project: string,
         deploymentGroupId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -609,7 +609,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async generateDeploymentPoolAccessToken(
         poolId: number
-        ): Promise<string> {
+    ): Promise<string> {
 
         return this.beginRequest<string>({
             apiVersion: "5.2-preview.1",
@@ -632,7 +632,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolName?: string,
         expands?: TaskAgent.DeploymentPoolSummaryExpands,
         poolIds?: number[]
-        ): Promise<TaskAgent.DeploymentPoolSummary[]> {
+    ): Promise<TaskAgent.DeploymentPoolSummary[]> {
 
         const queryValues: any = {
             poolName: poolName,
@@ -660,7 +660,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         targetId: number,
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             targetId: targetId,
@@ -695,7 +695,7 @@ export class TaskAgentRestClient extends RestClientBase {
         ownerId?: number,
         completedOn?: Date,
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             targetIds: targetIds && targetIds.join(","),
@@ -724,7 +724,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async refreshDeploymentTargets(
         project: string,
         deploymentGroupId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -744,7 +744,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async queryEndpoint(
         endpoint: TaskAgent.TaskDefinitionEndpoint
-        ): Promise<string[]> {
+    ): Promise<string[]> {
 
         return this.beginRequest<string[]>({
             apiVersion: "5.2-preview.1",
@@ -767,7 +767,7 @@ export class TaskAgentRestClient extends RestClientBase {
         environmentId: number,
         continuationToken?: string,
         top?: number
-        ): Promise<TaskAgent.EnvironmentDeploymentExecutionRecord[]> {
+    ): Promise<TaskAgent.EnvironmentDeploymentExecutionRecord[]> {
 
         const queryValues: any = {
             continuationToken: continuationToken,
@@ -794,7 +794,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async addEnvironment(
         environmentCreateParameter: TaskAgent.EnvironmentCreateParameter,
         project: string
-        ): Promise<TaskAgent.EnvironmentInstance> {
+    ): Promise<TaskAgent.EnvironmentInstance> {
 
         return this.beginRequest<TaskAgent.EnvironmentInstance>({
             apiVersion: "5.2-preview.1",
@@ -816,7 +816,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteEnvironment(
         project: string,
         environmentId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -840,7 +840,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         expands?: TaskAgent.EnvironmentExpands
-        ): Promise<TaskAgent.EnvironmentInstance> {
+    ): Promise<TaskAgent.EnvironmentInstance> {
 
         const queryValues: any = {
             expands: expands
@@ -870,7 +870,7 @@ export class TaskAgentRestClient extends RestClientBase {
         name?: string,
         continuationToken?: string,
         top?: number
-        ): Promise<TaskAgent.EnvironmentInstance[]> {
+    ): Promise<TaskAgent.EnvironmentInstance[]> {
 
         const queryValues: any = {
             name: name,
@@ -899,7 +899,7 @@ export class TaskAgentRestClient extends RestClientBase {
         environmentUpdateParameter: TaskAgent.EnvironmentUpdateParameter,
         project: string,
         environmentId: number
-        ): Promise<TaskAgent.EnvironmentInstance> {
+    ): Promise<TaskAgent.EnvironmentInstance> {
 
         return this.beginRequest<TaskAgent.EnvironmentInstance>({
             apiVersion: "5.2-preview.1",
@@ -922,7 +922,7 @@ export class TaskAgentRestClient extends RestClientBase {
         hubName: string,
         includeEnterpriseUsersCount?: boolean,
         includeHostedAgentMinutesCount?: boolean
-        ): Promise<TaskAgent.TaskHubLicenseDetails> {
+    ): Promise<TaskAgent.TaskHubLicenseDetails> {
 
         const queryValues: any = {
             includeEnterpriseUsersCount: includeEnterpriseUsersCount,
@@ -946,7 +946,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async updateTaskHubLicenseDetails(
         taskHubLicenseDetails: TaskAgent.TaskHubLicenseDetails,
         hubName: string
-        ): Promise<TaskAgent.TaskHubLicenseDetails> {
+    ): Promise<TaskAgent.TaskHubLicenseDetails> {
 
         return this.beginRequest<TaskAgent.TaskHubLicenseDetails>({
             apiVersion: "5.2-preview.3",
@@ -964,7 +964,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async validateInputs(
         inputValidationRequest: TaskAgent.InputValidationRequest
-        ): Promise<TaskAgent.InputValidationRequest> {
+    ): Promise<TaskAgent.InputValidationRequest> {
 
         return this.beginRequest<TaskAgent.InputValidationRequest>({
             apiVersion: "5.2-preview.1",
@@ -985,7 +985,7 @@ export class TaskAgentRestClient extends RestClientBase {
         requestId: number,
         lockToken: string,
         result?: TaskAgent.TaskResult
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             lockToken: lockToken,
@@ -1013,7 +1013,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         requestId: number,
         includeStatus?: boolean
-        ): Promise<TaskAgent.TaskAgentJobRequest> {
+    ): Promise<TaskAgent.TaskAgentJobRequest> {
 
         const queryValues: any = {
             includeStatus: includeStatus
@@ -1039,7 +1039,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         top: number,
         continuationToken?: string
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             '$top': top,
@@ -1065,7 +1065,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         agentId: number,
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             agentId: agentId,
@@ -1091,7 +1091,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         agentIds?: number[],
         completedRequestCount?: number
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             agentIds: agentIds && agentIds.join(","),
@@ -1117,7 +1117,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         planId: string,
         jobId?: string
-        ): Promise<TaskAgent.TaskAgentJobRequest[]> {
+    ): Promise<TaskAgent.TaskAgentJobRequest[]> {
 
         const queryValues: any = {
             planId: planId,
@@ -1141,7 +1141,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async queueAgentRequestByPool(
         request: TaskAgent.TaskAgentJobRequest,
         poolId: number
-        ): Promise<TaskAgent.TaskAgentJobRequest> {
+    ): Promise<TaskAgent.TaskAgentJobRequest> {
 
         return this.beginRequest<TaskAgent.TaskAgentJobRequest>({
             apiVersion: "5.2-preview.1",
@@ -1165,7 +1165,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         requestId: number,
         lockToken: string
-        ): Promise<TaskAgent.TaskAgentJobRequest> {
+    ): Promise<TaskAgent.TaskAgentJobRequest> {
 
         const queryValues: any = {
             lockToken: lockToken
@@ -1193,7 +1193,7 @@ export class TaskAgentRestClient extends RestClientBase {
         createParameters: TaskAgent.KubernetesResourceCreateParameters,
         project: string,
         environmentId: number
-        ): Promise<TaskAgent.KubernetesResource> {
+    ): Promise<TaskAgent.KubernetesResource> {
 
         return this.beginRequest<TaskAgent.KubernetesResource>({
             apiVersion: "5.2-preview.1",
@@ -1216,7 +1216,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         resourceId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1239,7 +1239,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         resourceId: number
-        ): Promise<TaskAgent.KubernetesResource> {
+    ): Promise<TaskAgent.KubernetesResource> {
 
         return this.beginRequest<TaskAgent.KubernetesResource>({
             apiVersion: "5.2-preview.1",
@@ -1259,7 +1259,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async generateDeploymentMachineGroupAccessToken(
         project: string,
         machineGroupId: number
-        ): Promise<string> {
+    ): Promise<string> {
 
         return this.beginRequest<string>({
             apiVersion: "5.2-preview.1",
@@ -1279,7 +1279,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async addDeploymentMachineGroup(
         machineGroup: TaskAgent.DeploymentMachineGroup,
         project: string
-        ): Promise<TaskAgent.DeploymentMachineGroup> {
+    ): Promise<TaskAgent.DeploymentMachineGroup> {
 
         return this.beginRequest<TaskAgent.DeploymentMachineGroup>({
             apiVersion: "5.2-preview.1",
@@ -1299,7 +1299,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteDeploymentMachineGroup(
         project: string,
         machineGroupId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1321,7 +1321,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         machineGroupId: number,
         actionFilter?: TaskAgent.MachineGroupActionFilter
-        ): Promise<TaskAgent.DeploymentMachineGroup> {
+    ): Promise<TaskAgent.DeploymentMachineGroup> {
 
         const queryValues: any = {
             actionFilter: actionFilter
@@ -1347,7 +1347,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         machineGroupName?: string,
         actionFilter?: TaskAgent.MachineGroupActionFilter
-        ): Promise<TaskAgent.DeploymentMachineGroup[]> {
+    ): Promise<TaskAgent.DeploymentMachineGroup[]> {
 
         const queryValues: any = {
             machineGroupName: machineGroupName,
@@ -1373,7 +1373,7 @@ export class TaskAgentRestClient extends RestClientBase {
         machineGroup: TaskAgent.DeploymentMachineGroup,
         project: string,
         machineGroupId: number
-        ): Promise<TaskAgent.DeploymentMachineGroup> {
+    ): Promise<TaskAgent.DeploymentMachineGroup> {
 
         return this.beginRequest<TaskAgent.DeploymentMachineGroup>({
             apiVersion: "5.2-preview.1",
@@ -1396,7 +1396,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         machineGroupId: number,
         tagFilters?: string[]
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         const queryValues: any = {
             tagFilters: tagFilters && tagFilters.join(",")
@@ -1422,7 +1422,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentMachines: TaskAgent.DeploymentMachine[],
         project: string,
         machineGroupId: number
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine[]>({
             apiVersion: "5.2-preview.1",
@@ -1445,7 +1445,7 @@ export class TaskAgentRestClient extends RestClientBase {
         machine: TaskAgent.DeploymentMachine,
         project: string,
         deploymentGroupId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -1468,7 +1468,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         machineId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1493,7 +1493,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         machineId: number,
         expand?: TaskAgent.DeploymentMachineExpands
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         const queryValues: any = {
             '$expand': expand
@@ -1524,7 +1524,7 @@ export class TaskAgentRestClient extends RestClientBase {
         tags?: string[],
         name?: string,
         expand?: TaskAgent.DeploymentMachineExpands
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         const queryValues: any = {
             tags: tags && tags.join(","),
@@ -1554,7 +1554,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         machineId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -1580,7 +1580,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         machineId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -1604,7 +1604,7 @@ export class TaskAgentRestClient extends RestClientBase {
         machines: TaskAgent.DeploymentMachine[],
         project: string,
         deploymentGroupId: number
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine[]>({
             apiVersion: "5.2-preview.1",
@@ -1625,7 +1625,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async createAgentPoolMaintenanceDefinition(
         definition: TaskAgent.TaskAgentPoolMaintenanceDefinition,
         poolId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceDefinition>({
             apiVersion: "5.2-preview.1",
@@ -1645,7 +1645,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteAgentPoolMaintenanceDefinition(
         poolId: number,
         definitionId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1665,7 +1665,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getAgentPoolMaintenanceDefinition(
         poolId: number,
         definitionId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceDefinition>({
             apiVersion: "5.2-preview.1",
@@ -1682,7 +1682,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async getAgentPoolMaintenanceDefinitions(
         poolId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition[]> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition[]> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceDefinition[]>({
             apiVersion: "5.2-preview.1",
@@ -1702,7 +1702,7 @@ export class TaskAgentRestClient extends RestClientBase {
         definition: TaskAgent.TaskAgentPoolMaintenanceDefinition,
         poolId: number,
         definitionId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceDefinition> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceDefinition>({
             apiVersion: "5.2-preview.1",
@@ -1723,7 +1723,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteAgentPoolMaintenanceJob(
         poolId: number,
         jobId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1743,7 +1743,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getAgentPoolMaintenanceJob(
         poolId: number,
         jobId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceJob>({
             apiVersion: "5.2-preview.1",
@@ -1762,7 +1762,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getAgentPoolMaintenanceJobLogs(
         poolId: number,
         jobId: number
-        ): Promise<ArrayBuffer> {
+    ): Promise<ArrayBuffer> {
 
         return this.beginRequest<ArrayBuffer>({
             apiVersion: "5.2-preview.1",
@@ -1782,7 +1782,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getAgentPoolMaintenanceJobs(
         poolId: number,
         definitionId?: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob[]> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob[]> {
 
         const queryValues: any = {
             definitionId: definitionId
@@ -1805,7 +1805,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async queueAgentPoolMaintenanceJob(
         job: TaskAgent.TaskAgentPoolMaintenanceJob,
         poolId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceJob>({
             apiVersion: "5.2-preview.1",
@@ -1827,7 +1827,7 @@ export class TaskAgentRestClient extends RestClientBase {
         job: TaskAgent.TaskAgentPoolMaintenanceJob,
         poolId: number,
         jobId: number
-        ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
+    ): Promise<TaskAgent.TaskAgentPoolMaintenanceJob> {
 
         return this.beginRequest<TaskAgent.TaskAgentPoolMaintenanceJob>({
             apiVersion: "5.2-preview.1",
@@ -1850,7 +1850,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         messageId: number,
         sessionId: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             sessionId: sessionId
@@ -1877,7 +1877,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         sessionId: string,
         lastMessageId?: number
-        ): Promise<TaskAgent.TaskAgentMessage> {
+    ): Promise<TaskAgent.TaskAgentMessage> {
 
         const queryValues: any = {
             sessionId: sessionId,
@@ -1901,7 +1901,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async refreshAgent(
         poolId: number,
         agentId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             agentId: agentId
@@ -1923,7 +1923,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async refreshAgents(
         poolId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -1944,7 +1944,7 @@ export class TaskAgentRestClient extends RestClientBase {
         message: TaskAgent.TaskAgentMessage,
         poolId: number,
         requestId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             requestId: requestId
@@ -1971,7 +1971,7 @@ export class TaskAgentRestClient extends RestClientBase {
         packageType: string,
         platform: string,
         version: string
-        ): Promise<TaskAgent.PackageMetadata> {
+    ): Promise<TaskAgent.PackageMetadata> {
 
         return this.beginRequest<TaskAgent.PackageMetadata>({
             apiVersion: "5.2-preview.2",
@@ -1993,7 +1993,7 @@ export class TaskAgentRestClient extends RestClientBase {
         packageType: string,
         platform?: string,
         top?: number
-        ): Promise<TaskAgent.PackageMetadata[]> {
+    ): Promise<TaskAgent.PackageMetadata[]> {
 
         const queryValues: any = {
             '$top': top
@@ -2015,7 +2015,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async getAgentPoolMetadata(
         poolId: number
-        ): Promise<string> {
+    ): Promise<string> {
 
         return this.beginRequest<string>({
             apiVersion: "5.2-preview.1",
@@ -2034,7 +2034,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async addAgentPool(
         pool: TaskAgent.TaskAgentPool
-        ): Promise<TaskAgent.TaskAgentPool> {
+    ): Promise<TaskAgent.TaskAgentPool> {
 
         return this.beginRequest<TaskAgent.TaskAgentPool>({
             apiVersion: "5.2-preview.1",
@@ -2051,7 +2051,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async deleteAgentPool(
         poolId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2074,7 +2074,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         properties?: string[],
         actionFilter?: TaskAgent.TaskAgentPoolActionFilter
-        ): Promise<TaskAgent.TaskAgentPool> {
+    ): Promise<TaskAgent.TaskAgentPool> {
 
         const queryValues: any = {
             properties: properties && properties.join(","),
@@ -2104,7 +2104,7 @@ export class TaskAgentRestClient extends RestClientBase {
         properties?: string[],
         poolType?: TaskAgent.TaskAgentPoolType,
         actionFilter?: TaskAgent.TaskAgentPoolActionFilter
-        ): Promise<TaskAgent.TaskAgentPool[]> {
+    ): Promise<TaskAgent.TaskAgentPool[]> {
 
         const queryValues: any = {
             poolName: poolName,
@@ -2129,7 +2129,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getAgentPoolsByIds(
         poolIds: number[],
         actionFilter?: TaskAgent.TaskAgentPoolActionFilter
-        ): Promise<TaskAgent.TaskAgentPool[]> {
+    ): Promise<TaskAgent.TaskAgentPool[]> {
 
         const queryValues: any = {
             poolIds: poolIds && poolIds.join(","),
@@ -2152,7 +2152,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async updateAgentPool(
         pool: TaskAgent.TaskAgentPool,
         poolId: number
-        ): Promise<TaskAgent.TaskAgentPool> {
+    ): Promise<TaskAgent.TaskAgentPool> {
 
         return this.beginRequest<TaskAgent.TaskAgentPool>({
             apiVersion: "5.2-preview.1",
@@ -2176,7 +2176,7 @@ export class TaskAgentRestClient extends RestClientBase {
         queue: TaskAgent.TaskAgentQueue,
         project?: string,
         authorizePipelines?: boolean
-        ): Promise<TaskAgent.TaskAgentQueue> {
+    ): Promise<TaskAgent.TaskAgentQueue> {
 
         const queryValues: any = {
             authorizePipelines: authorizePipelines
@@ -2201,7 +2201,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async createTeamProject(
         project?: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2222,7 +2222,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteAgentQueue(
         queueId: number,
         project?: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2246,7 +2246,7 @@ export class TaskAgentRestClient extends RestClientBase {
         queueId: number,
         project?: string,
         actionFilter?: TaskAgent.TaskAgentQueueActionFilter
-        ): Promise<TaskAgent.TaskAgentQueue> {
+    ): Promise<TaskAgent.TaskAgentQueue> {
 
         const queryValues: any = {
             actionFilter: actionFilter
@@ -2274,7 +2274,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project?: string,
         queueName?: string,
         actionFilter?: TaskAgent.TaskAgentQueueActionFilter
-        ): Promise<TaskAgent.TaskAgentQueue[]> {
+    ): Promise<TaskAgent.TaskAgentQueue[]> {
 
         const queryValues: any = {
             queueName: queueName,
@@ -2302,7 +2302,7 @@ export class TaskAgentRestClient extends RestClientBase {
         queueIds: number[],
         project?: string,
         actionFilter?: TaskAgent.TaskAgentQueueActionFilter
-        ): Promise<TaskAgent.TaskAgentQueue[]> {
+    ): Promise<TaskAgent.TaskAgentQueue[]> {
 
         const queryValues: any = {
             queueIds: queueIds && queueIds.join(","),
@@ -2330,7 +2330,7 @@ export class TaskAgentRestClient extends RestClientBase {
         queueNames: string[],
         project?: string,
         actionFilter?: TaskAgent.TaskAgentQueueActionFilter
-        ): Promise<TaskAgent.TaskAgentQueue[]> {
+    ): Promise<TaskAgent.TaskAgentQueue[]> {
 
         const queryValues: any = {
             queueNames: queueNames && queueNames.join(","),
@@ -2358,7 +2358,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolIds: number[],
         project?: string,
         actionFilter?: TaskAgent.TaskAgentQueueActionFilter
-        ): Promise<TaskAgent.TaskAgentQueue[]> {
+    ): Promise<TaskAgent.TaskAgentQueue[]> {
 
         const queryValues: any = {
             poolIds: poolIds && poolIds.join(","),
@@ -2380,7 +2380,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async getAgentCloudRequests(
         agentCloudId: number
-        ): Promise<TaskAgent.TaskAgentCloudRequest[]> {
+    ): Promise<TaskAgent.TaskAgentCloudRequest[]> {
 
         return this.beginRequest<TaskAgent.TaskAgentCloudRequest[]>({
             apiVersion: "5.2-preview.1",
@@ -2394,7 +2394,7 @@ export class TaskAgentRestClient extends RestClientBase {
     /**
      */
     public async getResourceLimits(
-        ): Promise<TaskAgent.ResourceLimit[]> {
+    ): Promise<TaskAgent.ResourceLimit[]> {
 
         return this.beginRequest<TaskAgent.ResourceLimit[]>({
             apiVersion: "5.2-preview.1",
@@ -2411,7 +2411,7 @@ export class TaskAgentRestClient extends RestClientBase {
         parallelismTag?: string,
         poolIsHosted?: boolean,
         includeRunningRequests?: boolean
-        ): Promise<TaskAgent.ResourceUsage> {
+    ): Promise<TaskAgent.ResourceUsage> {
 
         const queryValues: any = {
             parallelismTag: parallelismTag,
@@ -2433,7 +2433,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getTaskGroupHistory(
         project: string,
         taskGroupId: string
-        ): Promise<TaskAgent.TaskGroupRevision[]> {
+    ): Promise<TaskAgent.TaskGroupRevision[]> {
 
         return this.beginRequest<TaskAgent.TaskGroupRevision[]>({
             apiVersion: "5.2-preview.1",
@@ -2454,7 +2454,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteSecureFile(
         project: string,
         secureFileId: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2480,7 +2480,7 @@ export class TaskAgentRestClient extends RestClientBase {
         secureFileId: string,
         ticket: string,
         download?: boolean
-        ): Promise<ArrayBuffer> {
+    ): Promise<ArrayBuffer> {
 
         const queryValues: any = {
             ticket: ticket,
@@ -2512,7 +2512,7 @@ export class TaskAgentRestClient extends RestClientBase {
         secureFileId: string,
         includeDownloadTicket?: boolean,
         actionFilter?: TaskAgent.SecureFileActionFilter
-        ): Promise<TaskAgent.SecureFile> {
+    ): Promise<TaskAgent.SecureFile> {
 
         const queryValues: any = {
             includeDownloadTicket: includeDownloadTicket,
@@ -2543,7 +2543,7 @@ export class TaskAgentRestClient extends RestClientBase {
         namePattern?: string,
         includeDownloadTickets?: boolean,
         actionFilter?: TaskAgent.SecureFileActionFilter
-        ): Promise<TaskAgent.SecureFile[]> {
+    ): Promise<TaskAgent.SecureFile[]> {
 
         const queryValues: any = {
             namePattern: namePattern,
@@ -2574,7 +2574,7 @@ export class TaskAgentRestClient extends RestClientBase {
         secureFileIds: string[],
         includeDownloadTickets?: boolean,
         actionFilter?: TaskAgent.SecureFileActionFilter
-        ): Promise<TaskAgent.SecureFile[]> {
+    ): Promise<TaskAgent.SecureFile[]> {
 
         const queryValues: any = {
             secureFileIds: secureFileIds && secureFileIds.join(","),
@@ -2605,7 +2605,7 @@ export class TaskAgentRestClient extends RestClientBase {
         secureFileNames: string[],
         includeDownloadTickets?: boolean,
         actionFilter?: TaskAgent.SecureFileActionFilter
-        ): Promise<TaskAgent.SecureFile[]> {
+    ): Promise<TaskAgent.SecureFile[]> {
 
         const queryValues: any = {
             secureFileNames: secureFileNames && secureFileNames.join(","),
@@ -2634,7 +2634,7 @@ export class TaskAgentRestClient extends RestClientBase {
         condition: string,
         project: string,
         namePattern?: string
-        ): Promise<TaskAgent.SecureFile[]> {
+    ): Promise<TaskAgent.SecureFile[]> {
 
         const queryValues: any = {
             namePattern: namePattern
@@ -2663,7 +2663,7 @@ export class TaskAgentRestClient extends RestClientBase {
         secureFile: TaskAgent.SecureFile,
         project: string,
         secureFileId: string
-        ): Promise<TaskAgent.SecureFile> {
+    ): Promise<TaskAgent.SecureFile> {
 
         return this.beginRequest<TaskAgent.SecureFile>({
             apiVersion: "5.2-preview.1",
@@ -2686,7 +2686,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async updateSecureFiles(
         secureFiles: TaskAgent.SecureFile[],
         project: string
-        ): Promise<TaskAgent.SecureFile[]> {
+    ): Promise<TaskAgent.SecureFile[]> {
 
         return this.beginRequest<TaskAgent.SecureFile[]>({
             apiVersion: "5.2-preview.1",
@@ -2712,7 +2712,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         name: string,
         authorizePipelines?: boolean
-        ): Promise<TaskAgent.SecureFile> {
+    ): Promise<TaskAgent.SecureFile> {
 
         const queryValues: any = {
             name: name,
@@ -2742,7 +2742,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async createAgentSession(
         session: TaskAgent.TaskAgentSession,
         poolId: number
-        ): Promise<TaskAgent.TaskAgentSession> {
+    ): Promise<TaskAgent.TaskAgentSession> {
 
         return this.beginRequest<TaskAgent.TaskAgentSession>({
             apiVersion: "5.2-preview.1",
@@ -2762,7 +2762,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteAgentSession(
         poolId: number,
         sessionId: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2786,7 +2786,7 @@ export class TaskAgentRestClient extends RestClientBase {
         machine: TaskAgent.DeploymentMachine,
         project: string,
         deploymentGroupId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -2811,7 +2811,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         targetId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -2838,7 +2838,7 @@ export class TaskAgentRestClient extends RestClientBase {
         deploymentGroupId: number,
         targetId: number,
         expand?: TaskAgent.DeploymentTargetExpands
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         const queryValues: any = {
             '$expand': expand
@@ -2885,7 +2885,7 @@ export class TaskAgentRestClient extends RestClientBase {
         top?: number,
         enabled?: boolean,
         propertyFilters?: string[]
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         const queryValues: any = {
             tags: tags && tags.join(","),
@@ -2924,7 +2924,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         targetId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -2952,7 +2952,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         deploymentGroupId: number,
         targetId: number
-        ): Promise<TaskAgent.DeploymentMachine> {
+    ): Promise<TaskAgent.DeploymentMachine> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine>({
             apiVersion: "5.2-preview.1",
@@ -2978,7 +2978,7 @@ export class TaskAgentRestClient extends RestClientBase {
         machines: TaskAgent.DeploymentTargetUpdateParameter[],
         project: string,
         deploymentGroupId: number
-        ): Promise<TaskAgent.DeploymentMachine[]> {
+    ): Promise<TaskAgent.DeploymentMachine[]> {
 
         return this.beginRequest<TaskAgent.DeploymentMachine[]>({
             apiVersion: "5.2-preview.1",
@@ -3001,7 +3001,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async addTaskGroup(
         taskGroup: TaskAgent.TaskGroupCreateParameter,
         project: string
-        ): Promise<TaskAgent.TaskGroup> {
+    ): Promise<TaskAgent.TaskGroup> {
 
         return this.beginRequest<TaskAgent.TaskGroup>({
             apiVersion: "5.2-preview.1",
@@ -3025,7 +3025,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         taskGroupId: string,
         comment?: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             comment: comment
@@ -3056,7 +3056,7 @@ export class TaskAgentRestClient extends RestClientBase {
         taskGroupId: string,
         versionSpec: string,
         expand?: TaskAgent.TaskGroupExpands
-        ): Promise<TaskAgent.TaskGroup> {
+    ): Promise<TaskAgent.TaskGroup> {
 
         const queryValues: any = {
             versionSpec: versionSpec,
@@ -3083,7 +3083,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         taskGroupId: string,
         revision: number
-        ): Promise<string> {
+    ): Promise<string> {
 
         const queryValues: any = {
             revision: revision
@@ -3122,7 +3122,7 @@ export class TaskAgentRestClient extends RestClientBase {
         top?: number,
         continuationToken?: Date,
         queryOrder?: TaskAgent.TaskGroupQueryOrder
-        ): Promise<TaskAgent.TaskGroup[]> {
+    ): Promise<TaskAgent.TaskGroup[]> {
 
         const queryValues: any = {
             expanded: expanded,
@@ -3153,7 +3153,7 @@ export class TaskAgentRestClient extends RestClientBase {
         taskGroupMetadata: TaskAgent.PublishTaskGroupMetadata,
         project: string,
         parentTaskGroupId: string
-        ): Promise<TaskAgent.TaskGroup[]> {
+    ): Promise<TaskAgent.TaskGroup[]> {
 
         const queryValues: any = {
             parentTaskGroupId: parentTaskGroupId
@@ -3178,7 +3178,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async undeleteTaskGroup(
         taskGroup: TaskAgent.TaskGroup,
         project: string
-        ): Promise<TaskAgent.TaskGroup[]> {
+    ): Promise<TaskAgent.TaskGroup[]> {
 
         return this.beginRequest<TaskAgent.TaskGroup[]>({
             apiVersion: "5.2-preview.1",
@@ -3202,7 +3202,7 @@ export class TaskAgentRestClient extends RestClientBase {
         taskGroup: TaskAgent.TaskGroupUpdateParameter,
         project: string,
         taskGroupId?: string
-        ): Promise<TaskAgent.TaskGroup> {
+    ): Promise<TaskAgent.TaskGroup> {
 
         return this.beginRequest<TaskAgent.TaskGroup>({
             apiVersion: "5.2-preview.1",
@@ -3227,7 +3227,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         taskGroupId: string,
         disablePriorVersions?: boolean
-        ): Promise<TaskAgent.TaskGroup[]> {
+    ): Promise<TaskAgent.TaskGroup[]> {
 
         const queryValues: any = {
             disablePriorVersions: disablePriorVersions
@@ -3251,7 +3251,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async deleteTaskDefinition(
         taskId: string
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -3274,7 +3274,7 @@ export class TaskAgentRestClient extends RestClientBase {
         versionString: string,
         visibility?: string[],
         scopeLocal?: boolean
-        ): Promise<ArrayBuffer> {
+    ): Promise<ArrayBuffer> {
 
         const queryValues: any = {
             visibility: visibility,
@@ -3304,7 +3304,7 @@ export class TaskAgentRestClient extends RestClientBase {
         versionString: string,
         visibility?: string[],
         scopeLocal?: boolean
-        ): Promise<TaskAgent.TaskDefinition> {
+    ): Promise<TaskAgent.TaskDefinition> {
 
         const queryValues: any = {
             visibility: visibility,
@@ -3331,7 +3331,7 @@ export class TaskAgentRestClient extends RestClientBase {
         taskId?: string,
         visibility?: string[],
         scopeLocal?: boolean
-        ): Promise<TaskAgent.TaskDefinition[]> {
+    ): Promise<TaskAgent.TaskDefinition[]> {
 
         const queryValues: any = {
             visibility: visibility,
@@ -3357,7 +3357,7 @@ export class TaskAgentRestClient extends RestClientBase {
         poolId: number,
         agentId: number,
         currentState: string
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         const queryValues: any = {
             currentState: currentState
@@ -3381,10 +3381,10 @@ export class TaskAgentRestClient extends RestClientBase {
      * @param agentId - 
      */
     public async updateAgentUserCapabilities(
-        userCapabilities: { [key: string] : string; },
+        userCapabilities: { [key: string]: string; },
         poolId: number,
         agentId: number
-        ): Promise<TaskAgent.TaskAgent> {
+    ): Promise<TaskAgent.TaskAgent> {
 
         return this.beginRequest<TaskAgent.TaskAgent>({
             apiVersion: "5.2-preview.1",
@@ -3405,15 +3405,19 @@ export class TaskAgentRestClient extends RestClientBase {
      * @param project -
      */
     public async addVariableGroup(
-        variableGroupParameters: TaskAgent.VariableGroupParameters,
-        project: string
-        ): Promise<TaskAgent.VariableGroup> {
+        project: string,
+        variableGroupParameters: TaskAgent.VariableGroupParameters
+    ): Promise<TaskAgent.VariableGroup> {
 
         return this.beginRequest<TaskAgent.VariableGroup>({
             apiVersion: "5.2-preview.2",
             method: "POST",
-            routeTemplate: "{project}/_apis/distributedtask/variablegroups/{groupId}",
+            routeTemplate: "{project}/_apis/distributedtask/variablegroups/",
+            routeValues: {
+                project: project
+            },
             body: variableGroupParameters
+
         });
     }
 
@@ -3426,7 +3430,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async deleteVariableGroup(
         groupId: number,
         projectIds: string[]
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             projectIds: projectIds && projectIds.join(",")
@@ -3452,7 +3456,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async shareVariableGroup(
         variableGroupProjectReferences: TaskAgent.VariableGroupProjectReference[],
         variableGroupId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         const queryValues: any = {
             variableGroupId: variableGroupId
@@ -3476,7 +3480,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async updateVariableGroup(
         variableGroupParameters: TaskAgent.VariableGroupParameters,
         groupId: number
-        ): Promise<TaskAgent.VariableGroup> {
+    ): Promise<TaskAgent.VariableGroup> {
 
         return this.beginRequest<TaskAgent.VariableGroup>({
             apiVersion: "5.2-preview.2",
@@ -3498,7 +3502,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getVariableGroup(
         project: string,
         groupId: number
-        ): Promise<TaskAgent.VariableGroup> {
+    ): Promise<TaskAgent.VariableGroup> {
 
         return this.beginRequest<TaskAgent.VariableGroup>({
             apiVersion: "5.2-preview.2",
@@ -3527,7 +3531,7 @@ export class TaskAgentRestClient extends RestClientBase {
         top?: number,
         continuationToken?: number,
         queryOrder?: TaskAgent.VariableGroupQueryOrder
-        ): Promise<TaskAgent.VariableGroup[]> {
+    ): Promise<TaskAgent.VariableGroup[]> {
 
         const queryValues: any = {
             groupName: groupName,
@@ -3556,7 +3560,7 @@ export class TaskAgentRestClient extends RestClientBase {
     public async getVariableGroupsById(
         project: string,
         groupIds: number[]
-        ): Promise<TaskAgent.VariableGroup[]> {
+    ): Promise<TaskAgent.VariableGroup[]> {
 
         const queryValues: any = {
             groupIds: groupIds && groupIds.join(",")
@@ -3581,7 +3585,7 @@ export class TaskAgentRestClient extends RestClientBase {
         createParameters: TaskAgent.VirtualMachineGroupCreateParameters,
         project: string,
         environmentId: number
-        ): Promise<TaskAgent.VirtualMachineGroup> {
+    ): Promise<TaskAgent.VirtualMachineGroup> {
 
         return this.beginRequest<TaskAgent.VirtualMachineGroup>({
             apiVersion: "5.2-preview.1",
@@ -3604,7 +3608,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         resourceId: number
-        ): Promise<void> {
+    ): Promise<void> {
 
         return this.beginRequest<void>({
             apiVersion: "5.2-preview.1",
@@ -3627,7 +3631,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         resourceId: number
-        ): Promise<TaskAgent.VirtualMachineGroup> {
+    ): Promise<TaskAgent.VirtualMachineGroup> {
 
         return this.beginRequest<TaskAgent.VirtualMachineGroup>({
             apiVersion: "5.2-preview.1",
@@ -3649,7 +3653,7 @@ export class TaskAgentRestClient extends RestClientBase {
         resource: TaskAgent.VirtualMachineGroup,
         project: string,
         environmentId: number
-        ): Promise<TaskAgent.VirtualMachineGroup> {
+    ): Promise<TaskAgent.VirtualMachineGroup> {
 
         return this.beginRequest<TaskAgent.VirtualMachineGroup>({
             apiVersion: "5.2-preview.1",
@@ -3682,7 +3686,7 @@ export class TaskAgentRestClient extends RestClientBase {
         partialNameMatch?: boolean,
         tags?: string[],
         top?: number
-        ): Promise<TaskAgent.VirtualMachine[]> {
+    ): Promise<TaskAgent.VirtualMachine[]> {
 
         const queryValues: any = {
             continuationToken: continuationToken,
@@ -3715,7 +3719,7 @@ export class TaskAgentRestClient extends RestClientBase {
         project: string,
         environmentId: number,
         resourceId: number
-        ): Promise<TaskAgent.VirtualMachine[]> {
+    ): Promise<TaskAgent.VirtualMachine[]> {
 
         return this.beginRequest<TaskAgent.VirtualMachine[]>({
             apiVersion: "5.2-preview.1",
@@ -3735,7 +3739,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async acquireAccessToken(
         authenticationRequest: TaskAgent.AadOauthTokenRequest
-        ): Promise<TaskAgent.AadOauthTokenResult> {
+    ): Promise<TaskAgent.AadOauthTokenResult> {
 
         return this.beginRequest<TaskAgent.AadOauthTokenResult>({
             apiVersion: "5.2-preview.1",
@@ -3758,7 +3762,7 @@ export class TaskAgentRestClient extends RestClientBase {
         promptOption?: TaskAgent.AadLoginPromptOption,
         completeCallbackPayload?: string,
         completeCallbackByAuthCode?: boolean
-        ): Promise<string> {
+    ): Promise<string> {
 
         const queryValues: any = {
             tenantId: tenantId,
@@ -3779,7 +3783,7 @@ export class TaskAgentRestClient extends RestClientBase {
     /**
      */
     public async getVstsAadTenantId(
-        ): Promise<string> {
+    ): Promise<string> {
 
         return this.beginRequest<string>({
             apiVersion: "5.2-preview.1",
@@ -3794,7 +3798,7 @@ export class TaskAgentRestClient extends RestClientBase {
      */
     public async getYamlSchema(
         validateTaskNames?: boolean
-        ): Promise<any> {
+    ): Promise<any> {
 
         const queryValues: any = {
             validateTaskNames: validateTaskNames
