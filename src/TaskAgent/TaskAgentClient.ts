@@ -3402,15 +3402,17 @@ export class TaskAgentRestClient extends RestClientBase {
      * Add a variable group.
      * 
      * @param variableGroupParameters - 
+     * @param project -
      */
     public async addVariableGroup(
-        variableGroupParameters: TaskAgent.VariableGroupParameters
+        variableGroupParameters: TaskAgent.VariableGroupParameters,
+        project: string
         ): Promise<TaskAgent.VariableGroup> {
 
         return this.beginRequest<TaskAgent.VariableGroup>({
             apiVersion: "5.2-preview.2",
             method: "POST",
-            routeTemplate: "_apis/distributedtask/variablegroups/{groupId}",
+            routeTemplate: "{project}/_apis/distributedtask/variablegroups/{groupId}",
             body: variableGroupParameters
         });
     }
