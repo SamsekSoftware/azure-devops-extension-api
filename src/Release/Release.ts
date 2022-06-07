@@ -2372,11 +2372,11 @@ export interface ReleaseDefinition extends ReleaseDefinitionShallowReference {
     /**
      * Gets the reference of last release.
      */
-    lastRelease: ReleaseReference;
+    lastRelease?: ReleaseReference;
     /**
      * Gets or sets the identity who modified.
      */
-    modifiedBy: WebApi.IdentityRef;
+    modifiedBy?: WebApi.IdentityRef;
     /**
      * Gets date on which it got modified.
      */
@@ -2384,7 +2384,7 @@ export interface ReleaseDefinition extends ReleaseDefinitionShallowReference {
     /**
      * Gets or sets pipeline process.
      */
-    pipelineProcess: PipelineProcess;
+    pipelineProcess?: PipelineProcess;
     /**
      * Gets or sets properties.
      */
@@ -2392,8 +2392,8 @@ export interface ReleaseDefinition extends ReleaseDefinitionShallowReference {
     /**
      * Gets or sets the release name format.
      */
-    releaseNameFormat: string;
-    retentionPolicy: RetentionPolicy;
+    releaseNameFormat?: string;
+    retentionPolicy?: RetentionPolicy;
     /**
      * Gets the revision number.
      */
@@ -2461,7 +2461,7 @@ export interface ReleaseDefinitionEnvironment {
     /**
      * Gets or sets the BadgeUrl. BadgeUrl will be used when Badge will be enabled in Release Definition Environment.
      */
-    badgeUrl: string;
+    badgeUrl?: string;
     /**
      * Gets or sets the environment conditions.
      */
@@ -2469,7 +2469,7 @@ export interface ReleaseDefinitionEnvironment {
     /**
      * Gets or sets the current release reference.
      */
-    currentRelease: ReleaseShallowReference;
+    currentRelease?: ReleaseShallowReference;
     /**
      * Gets or sets the demands.
      */
@@ -2525,7 +2525,7 @@ export interface ReleaseDefinitionEnvironment {
     /**
      * Gets or sets the environment process parameters.
      */
-    processParameters: DistributedTaskCommon.ProcessParameters;
+    processParameters?: DistributedTaskCommon.ProcessParameters;
     /**
      * Gets or sets the properties on environment.
      */
@@ -2533,7 +2533,7 @@ export interface ReleaseDefinitionEnvironment {
     /**
      * Gets or sets the queue ID.
      */
-    queueId: number;
+    queueId?: number;
     /**
      * Gets and sets the rank of the ReleaseDefinitionEnvironment.
      */
@@ -2542,7 +2542,7 @@ export interface ReleaseDefinitionEnvironment {
      * Gets or sets the environment retention policy.
      */
     retentionPolicy: EnvironmentRetentionPolicy;
-    runOptions: { [key: string] : string; };
+    runOptions?: { [key: string] : string; };
     /**
      * Gets or sets the schedules
      */
@@ -2768,7 +2768,7 @@ export interface ReleaseDefinitionShallowReference {
     /**
      * Gets or sets project reference.
      */
-    projectReference: ProjectReference;
+    projectReference?: ProjectReference;
     /**
      * Gets the REST API url to access the release definition.
      */
