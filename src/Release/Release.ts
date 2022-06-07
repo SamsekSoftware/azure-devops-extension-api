@@ -2352,7 +2352,7 @@ export interface ReleaseDefinition extends ReleaseDefinitionShallowReference {
     /**
      * Gets or sets the identity who created.
      */
-    createdBy: WebApi.IdentityRef;
+    createdBy?: WebApi.IdentityRef;
     /**
      * Gets date on which it got created.
      */
@@ -2435,7 +2435,7 @@ export interface ReleaseDefinitionApprovalStep extends ReleaseDefinitionEnvironm
     /**
      * Gets and sets the approver.
      */
-    approver: WebApi.IdentityRef;
+    approver?: WebApi.IdentityRef;
     /**
      * Indicates whether the approval automated.
      */
@@ -2687,7 +2687,7 @@ export interface ReleaseDefinitionGatesStep {
     /**
      * Gets or sets the gate options.
      */
-    gatesOptions: ReleaseDefinitionGatesOptions;
+    gatesOptions?: ReleaseDefinitionGatesOptions;
     /**
      * ID of the ReleaseDefinitionGateStep.
      */
