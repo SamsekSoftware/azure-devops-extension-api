@@ -119,7 +119,8 @@ export interface AzureKeyVaultVariableGroupProviderData extends VariableGroupPro
 export interface AzureKeyVaultVariableValue extends VariableValue {
     contentType: string;
     enabled: boolean;
-    expires: Date;
+    isReadOnly: boolean;
+    expires?: Date;
 }
 
 /**
@@ -2978,7 +2979,7 @@ export interface VariableGroupParameters {
     /**
      * Sets variables contained in the variable group.
      */
-    variables: { [key: string] : VariableValue; };
+    variables: { [key: string] : VariableValue | AzureKeyVaultVariableValue; };
 }
 
 /**
